@@ -1,4 +1,4 @@
-// CONDEGNA:
+// CONSEGNA:
 // Chiedi all’utente il cognome,
 // inseriscilo in un array con altri cognomi e
 // stampa la lista ordinata alfabeticamente.
@@ -24,13 +24,12 @@ do {
     surname = prompt("Inserisci il tuo Cognome (max 20 caratteri alfabetici)");
     //controlli minimi su correttezza input
     // non deve essere un numero e deve essere massimo surnameMaxLen caratteri
-    // todo: con questo controllo, stringhe alfanumeriche (tipo "aa33" o "45ggg" vengono accettate)
+    // ATTENZIONE: con questo controllo, stringhe alfanumeriche (tipo "aa33" o "45ggg" vengono accettate)
     if ((isNaN(surname)) && (surname.length <= surnameMaxLen)) {
         surnameValid = true;
     } else {
         alert("ATTENZIONE: input non valido. \nInserisci una stringa alfabetica di max 20 caratteri. \nGrazie.")
     }
-
 } while (!surnameValid);
 
 // -- UPPERCASE lowercase --
@@ -42,9 +41,8 @@ surname = surname.toUpperCase();
 
 //inserisco il cognome recuperato, in fondo all'array
 FamilyNames.push(surname);
-//todo : gestire cognome gia' presente...
 
-//ordino l'array cognomi
+//ordino l'array FamilyNames
 FamilyNames = FamilyNames.sort();
 
 // ricavo la posizione del cognome inserito dall'utente
@@ -71,5 +69,4 @@ for (var i = 0; i < FamilyNames.length; i++) {
 }
 
 // visualizzo la posizione del cognome appena inserito
-console.log("posizione cognome: ", posizione);
 document.getElementById("posizione").innerHTML = posizione;
