@@ -34,7 +34,7 @@ do {
     // - inserimento 1 o più spazi iniziali
     // - stringa tipo: "xx    xxxx", cioè con più spazi tra 2 stringhe di caratteri
 
-    // controllo che l'input è nullo o maggiore di surnameMaxLen o  minore di surnameMinLen caratteri
+    // controllo se l'input è nullo o maggiore di surnameMaxLen o  minore di surnameMinLen caratteri
     if ((surname == null) || (surname.length > surnameMaxLen) || (surname.length < surnameMinLen)) {
         surnameValid = false;
     } else { // lunghezza OK, ora verifico se ci sono dei numeri mischiati ai caratteri
@@ -89,7 +89,7 @@ for (var i = 0; i < FamilyNames.length; i++) {
 // SOLUZIONE 3
 for (var i = 0; i < FamilyNames.length; i++) {
     node = document.createElement("p"); // creo un nuovo tag <p> per ogni elemento da visualizzare
-    node.innerHTML = FamilyNames[i]; // valorizzo iL nuovo elemento
+    node.innerHTML = FamilyNames[i]; // valorizzo il nuovo elemento
     document.getElementById("cognomi").appendChild(node); // lo inserisco nella giusta posizione sulla pagina
     if (i == posizione - 1) {
         // coloro il nuovo cognome inserito nella lista
@@ -97,5 +97,5 @@ for (var i = 0; i < FamilyNames.length; i++) {
     }
 }
 
-// visualizzo il numrino che indica la posizione del cognome appena inserito
+// visualizzo il numerino che indica la posizione del cognome appena inserito
 document.getElementById("posizione").innerHTML = posizione;
