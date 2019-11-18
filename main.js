@@ -17,7 +17,6 @@ var FamilyNames = ["ROCKERDUCK",
 var surname = ""; // cognome che inserisce l'utente
 var surnameMaxLen = 20; // massima lunghezza ammessa per il cognome introdotto dall'utente
 var surnameValid = false; // validità della stringa cognome introdotta dall'utente
-var index = 0; //indice per scansire l'array
 var posizione = 0; // posizione dell'elemento inserito nell'array
 
 //recupero l'input dall'utente, mi attendo una stringa alfabetica (cognome)
@@ -48,7 +47,7 @@ FamilyNames.push(surname);
 //ordino l'array cognomi
 FamilyNames = FamilyNames.sort();
 
-// stampo la posizione (index) del cognome inserito dall'utente
+// ricavo la posizione del cognome inserito dall'utente
 for (var i = 0; i < FamilyNames.length; i++) {
     if (FamilyNames[i] == surname) {
         posizione = i + 1;
@@ -56,15 +55,20 @@ for (var i = 0; i < FamilyNames.length; i++) {
 }
 
 // visualizzo array ordinato
-for (var i = 0; i < FamilyNames.length; i++) {
-    document.getElementById("cognomi").innerHTML += FamilyNames[i];
-    document.getElementById("cognomi").innerHTML += "<br>"; //brutto??!!
-}
+// METODO 1
+// for (var i = 0; i < FamilyNames.length; i++) {
+//     document.getElementById("cognomi").innerHTML += FamilyNames[i] + "<br>";
+// }
 
-// in alternativa, visualizzo tutto l'array in un colpo solo
+// METODO 2
 // document.getElementById("cognomi").innerHTML = FamilyNames;
 
-
+// METODO 3
+for (var i = 0; i < FamilyNames.length; i++) {
+    node = document.createElement("p"); // creo un nuovo <p>
+    node.innerHTML = FamilyNames[i]; // valorizzo iL nuovo elemento
+    document.getElementById("cognomi").appendChild(node); // lo inserisco nella giusta posizione sulla pagina
+}
 
 // visualizzo la posizione del cognome appena inserito
 console.log("posizione cognome: ", posizione);
