@@ -3,3 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #f2f2f2;
+    font-family: sans-serif;
+}
+
+#container {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px auto;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    background-image: linear-gradient(azure, lightblue, blue);
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#cognomi {
+    word-break: break-all;
+}
+
+#position {
+    background: #ded9d9;
+    color: black;
+    border-radius: 10px;
+    text-shadow: none;
+    font-size: 20px;
+    padding: 10px;
+    border: 5px solid lightgray;
+    font-family: 'Alfa Slab One', cursive;
+}
